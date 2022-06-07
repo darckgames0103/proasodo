@@ -3,6 +3,19 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Shadow Hub", "BloodTheme")
 local TabA = Window:NewTab("Dupes")
 local SectionC = TabA:NewSection("Safety")
+
+
+
+
+Section:NewKeybind("f to toggle", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+
+
+
+
+
 SectionC:NewToggle("Safe Spot", "Use this when duping.", function(state)
 	if state then
 		_G.ss = state
