@@ -7,9 +7,7 @@ local SectionC = TabA:NewSection("Safety")
 
 
 
-Section:NewKeybind("f to toggle", "KeybindInfo", Enum.KeyCode.F, function()
-	Library:ToggleUI()
-end)
+
 
 
 
@@ -26,6 +24,7 @@ SectionC:NewToggle("Safe Spot", "Use this when duping.", function(state)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
 	end
 end)
+
 _G.Speed = 16
 game:GetService("Workspace").Map.leaderboard.SurfaceGui.ServerVersion.Text = "kode's dupes loaded\ncheat version: 1.5\ndiscord.gg/7c9QBaC6GV"
 local SectionA = TabA:NewSection("Normal Dupes")
@@ -119,6 +118,9 @@ SectionD:NewTextBox("Buy Banana", "Type the amount.", function(txt)
 		wait(0.01)
 		game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("The banana")
 	end
+end)
+Section:NewKeybind("clica b nessa mizera", "KeybindInfo", Enum.KeyCode.b, function()
+	Library:ToggleUI()
 end)
 SectionD:NewTextBox("Buy Rainbow Pop It", "Type the amount.", function(txt)
 	for i = 1,txt do
