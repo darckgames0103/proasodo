@@ -153,7 +153,11 @@ SectionF:NewToggle("Anti Reaper (uses watermelons)", "You can buy lots of waterm
 end)
 
 local TabD = Window:NewTab("Misc")
+
 local SectionG = TabD:NewSection("Misc")
+Section:NewKeybind("Aperta f eu comi sua mae", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
 SectionG:NewButton("Trade Value", "Also known as X-RAY, allows you to check the value of a trade", function()
 	game.Players.LocalPlayer.XRay.Value = true
 end)
@@ -405,9 +409,6 @@ SectionJ:NewButton("Drop Munneh (x15)", "Drops Munneh 15 times.", function()
 		game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer("Munneh")
 		wait(0.35)
 	end
-end)
-Section:NewKeybind("Aperta b nessa mizera", "KeybindInfo", Enum.KeyCode.F, function()
-	Library:ToggleUI()
 end)
 SectionJ:NewButton("Drop Mom (x15)", "Drops Mom 15 times.", function()
 	for i = 1,15 do
