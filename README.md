@@ -3,17 +3,6 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Shadow Hub", "BloodTheme")
 local TabA = Window:NewTab("Dupes")
 local SectionC = TabA:NewSection("Safety")
-
-
-
-
-
-
-
-
-
-
-
 SectionC:NewToggle("Safe Spot", "Use this when duping.", function(state)
 	if state then
 		_G.ss = state
@@ -24,7 +13,6 @@ SectionC:NewToggle("Safe Spot", "Use this when duping.", function(state)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
 	end
 end)
-
 _G.Speed = 16
 game:GetService("Workspace").Map.leaderboard.SurfaceGui.ServerVersion.Text = "kode's dupes loaded\ncheat version: 1.5\ndiscord.gg/7c9QBaC6GV"
 local SectionA = TabA:NewSection("Normal Dupes")
@@ -118,9 +106,6 @@ SectionD:NewTextBox("Buy Banana", "Type the amount.", function(txt)
 		wait(0.01)
 		game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("The banana")
 	end
-end)
-Section:NewKeybind("clica b nessa mizera", "KeybindInfo", Enum.KeyCode.b, function()
-	Library:ToggleUI()
 end)
 SectionD:NewTextBox("Buy Rainbow Pop It", "Type the amount.", function(txt)
 	for i = 1,txt do
@@ -420,6 +405,9 @@ SectionJ:NewButton("Drop Munneh (x15)", "Drops Munneh 15 times.", function()
 		game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer("Munneh")
 		wait(0.35)
 	end
+end)
+Section:NewKeybind("Aperta b nessa mizera", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:ToggleUI()
 end)
 SectionJ:NewButton("Drop Mom (x15)", "Drops Mom 15 times.", function()
 	for i = 1,15 do
